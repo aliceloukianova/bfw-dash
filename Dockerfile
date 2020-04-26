@@ -10,4 +10,5 @@ RUN pip3 install -r /tmp/requirements.txt
 COPY ./ /app
 WORKDIR /app
 
-CMD gunicorn --bind 0.0.0.0:80 wsgi
+EXPOSE 80
+CMD flask run --host=0.0.0.0
